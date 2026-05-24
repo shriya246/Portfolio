@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 248 40% 98%;
+  --foreground: 230 23% 10%;
+  --surface: 0 0% 100%;
+  --surface-muted: 240 16% 94%;
+  --border: 235 18% 84%;
+  --muted: 226 18% 38%;
+}
+
+.dark {
+  --background: 240 20% 5%;
+  --foreground: 210 40% 96%;
+  --surface: 240 17% 8%;
+  --surface-muted: 240 14% 12%;
+  --border: 240 21% 15%;
+  --muted: 215 20% 65%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 14% 10%, rgba(124, 58, 237, 0.18), transparent 28rem),
+    radial-gradient(circle at 92% 14%, rgba(6, 182, 212, 0.12), transparent 26rem),
+    hsl(var(--background));
+  color: hsl(var(--foreground));
+  text-rendering: optimizeLegibility;
+}
+
+body::before {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  content: "";
+  opacity: 0.12;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.14) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.14) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(to bottom, black, transparent 82%);
+}
+
+::selection {
+  color: #f8fafc;
+  background: rgba(124, 58, 237, 0.72);
+}
+
+@layer base {
+  a,
+  button,
+  input,
+  textarea {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet focus-visible:ring-offset-2 focus-visible:ring-offset-background;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-white via-violet-soft to-cyan-soft bg-clip-text text-transparent dark:from-white dark:via-violet-soft dark:to-cyan-soft;
+  }
+
+  .glass-border {
+    @apply border border-white/10 bg-white/[0.04] backdrop-blur-xl dark:border-white/10 dark:bg-white/[0.035];
+  }
+
+  .card-border-gradient {
+    position: relative;
+  }
+
+  .card-border-gradient::before {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    padding: 1px;
+    content: "";
+    border-radius: inherit;
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.58), rgba(6, 182, 212, 0.18), rgba(255, 255, 255, 0.08));
+    mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    mask-composite: exclude;
+  }
+
+  .aurora-blob {
+    position: absolute;
+    width: min(48vw, 34rem);
+    height: min(48vw, 34rem);
+    border-radius: 9999px;
+    filter: blur(56px);
+    opacity: 0.42;
+    mix-blend-mode: screen;
+  }
+
+  .floating-chip:nth-child(1) {
+    top: 18%;
+    left: 10%;
+    animation-delay: -1.2s;
+  }
+
+  .floating-chip:nth-child(2) {
+    top: 30%;
+    right: 9%;
+    animation-delay: -3s;
+  }
+
+  .floating-chip:nth-child(3) {
+    right: 20%;
+    bottom: 22%;
+    animation-delay: -4.4s;
+  }
+
+  .floating-chip:nth-child(4) {
+    bottom: 18%;
+    left: 15%;
+    animation-delay: -2.1s;
+  }
+
+  .floating-chip:nth-child(5) {
+    top: 57%;
+    left: 7%;
+    animation-delay: -5.2s;
+  }
+}
