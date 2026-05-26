@@ -9,6 +9,8 @@ interface ResumeModalProps {
   onClose: () => void;
 }
 
+const RESUME_FILE_PATH = "/Shriya_Patel_Software_Engineer_Resume.pdf";
+
 export default function ResumeModal({ open, onClose }: ResumeModalProps) {
   useEffect(() => {
     if (!open) {
@@ -54,8 +56,8 @@ export default function ResumeModal({ open, onClose }: ResumeModalProps) {
               </button>
               <p className="hidden font-mono text-xs uppercase tracking-[0.28em] text-muted sm:block">Resume Preview</p>
               <a
-                href="/resume.pdf"
-                download
+                href={RESUME_FILE_PATH}
+                download="shriya-patel-resume.pdf"
                 aria-label="Download Shriya Patel resume"
                 className="inline-flex items-center gap-2 rounded-xl bg-violet px-4 py-2 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:shadow-violet-glow"
               >
@@ -72,7 +74,7 @@ export default function ResumeModal({ open, onClose }: ResumeModalProps) {
             >
               <iframe
                 title="Shriya Patel resume"
-                src="/resume.pdf"
+                src={RESUME_FILE_PATH}
                 className="h-full min-h-[70vh] w-full rounded-2xl border border-border bg-white shadow-card-glow"
               />
             </motion.div>

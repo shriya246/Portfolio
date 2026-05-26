@@ -49,7 +49,13 @@ npm run build
 
 ## Resume
 
-The resume modal and download button are wired to `public/resume.pdf`. Replace the placeholder file with Shriya's final PDF using the same filename.
+The resume modal and download button are wired to:
+
+```txt
+public/shriya-patel-resume.pdf
+```
+
+Add Shriya's final PDF to the `public` folder with that exact lowercase, hyphen-separated filename before deploying. The public URL will be `/shriya-patel-resume.pdf`.
 
 ## Deployment
 
