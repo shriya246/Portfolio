@@ -12,7 +12,7 @@ export const PROJECTS: Project[] = [
       "Redis caching",
       "Azure Service Bus for reliable message delivery"
     ],
-    github: "https://github.com/shriya-patel",
+    github: "https://github.com/shriya246/Realtime-Chat-App",
     live: null,
     categories: ["Backend", "Cloud", "Real-Time"],
     problemStatement:
@@ -36,7 +36,7 @@ export const PROJECTS: Project[] = [
       "Anomaly detection",
       "Real-time environmental monitoring"
     ],
-    github: "https://github.com/shriya-patel",
+    github: "https://github.com/shriya246/Air-Pollution-Monitoring-System-IOT",
     live: null,
     categories: ["Cloud", "IoT", "Backend"],
     problemStatement:
@@ -59,7 +59,7 @@ export const PROJECTS: Project[] = [
       "Scalable ML pipelines",
       "Production model deployment"
     ],
-    github: "https://github.com/shriya-patel",
+    github: "https://github.com/shriya246/3D-Object-Detection-System",
     live: null,
     categories: ["Machine Learning", "AI", "Python"],
     problemStatement:

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Github, Maximize2 } from "lucide-react";
+import { Github, Maximize2 } from "lucide-react";
 import type { KeyboardEvent } from "react";
 import type { Project } from "@/types";
 
@@ -56,24 +56,6 @@ export default function ProjectCard({ project, onSelect }: ProjectCardProps) {
           <Github className="h-4 w-4" />
           GitHub
         </a>
-        {project.live ? (
-          <a
-            href={project.live}
-            target="_blank"
-            rel="noreferrer"
-            aria-label={`Open ${project.name} live demo`}
-            onClick={(event) => event.stopPropagation()}
-            className="inline-flex items-center gap-2 rounded-xl border border-border bg-background px-4 py-2 text-sm font-semibold text-foreground transition hover:border-cyan/60 hover:text-cyan"
-          >
-            <ExternalLink className="h-4 w-4" />
-            Live Demo
-          </a>
-        ) : (
-          <span className="inline-flex items-center gap-2 rounded-xl border border-border bg-background/60 px-4 py-2 text-sm font-semibold text-muted/60">
-            <ExternalLink className="h-4 w-4" />
-            Live Demo
-          </span>
-        )}
         <span className="ml-auto inline-flex items-center gap-2 rounded-xl px-2 py-2 text-sm font-semibold text-cyan">
           <Maximize2 className="h-4 w-4" />
           Details

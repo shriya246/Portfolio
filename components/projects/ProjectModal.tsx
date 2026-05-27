@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { ExternalLink, Github, X } from "lucide-react";
+import { Github, X } from "lucide-react";
 import { useEffect } from "react";
 import type { Project } from "@/types";
 
@@ -126,18 +126,6 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                 <Github className="h-4 w-4" />
                 GitHub
               </a>
-              {project.live ? (
-                <a
-                  href={project.live}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={`Open ${project.name} live demo`}
-                  className="inline-flex items-center justify-center gap-2 rounded-xl border border-border bg-background px-5 py-3 text-sm font-semibold text-foreground transition hover:border-cyan/60 hover:text-cyan"
-                >
-                  <ExternalLink className="h-4 w-4" />
-                  Live Demo
-                </a>
-              ) : null}
             </div>
           </motion.article>
         </motion.div>

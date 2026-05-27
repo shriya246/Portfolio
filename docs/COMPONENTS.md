@@ -34,7 +34,7 @@
 | Component | Props | Purpose |
 | --- | --- | --- |
 | `FilterBar` | `activeFilter`, `onChange` | Category filter buttons for project archive. |
-| `ProjectCard` | `project`, `onSelect` | Animated project card with tags, technology stack, source link, live demo state, and modal trigger. |
+| `ProjectCard` | `project`, `onSelect` | Animated project card with tags, technology stack, source link, and modal trigger. |
 | `ProjectModal` | `project`, `onClose` | Overlay with full description, problem statement, architecture decisions, metrics, technologies, and links. |
 
 ## Publications
