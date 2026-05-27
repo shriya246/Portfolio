@@ -1,87 +1,74 @@
-"use client";
-
-import { AnimatePresence, motion } from "framer-motion";
-import { useMemo, useState } from "react";
-import { SKILL_CATEGORIES } from "@/constants/skills";
-import type { SkillCategoryId } from "@/types";
-import SectionHeading from "@/components/ui/SectionHeading";
+import { Code2 } from "lucide-react";
 import ScrollReveal from "@/components/ui/ScrollReveal";
-import { cn } from "@/lib/utils";
+import { SKILL_CATEGORIES } from "@/constants/skills";
 
-const FILTERS: Array<{ id: SkillCategoryId; label: string }> = [
-  { id: "all", label: "All" },
-  ...SKILL_CATEGORIES.map((category) => ({ id: category.id, label: category.label }))
+interface StackGroup {
+  title: string;
+  categoryIds: Array<(typeof SKILL_CATEGORIES)[number]["id"]>;
+}
+
+const STACK_GROUPS: StackGroup[] = [
+  {
+    title: "Languages",
+    categoryIds: ["languages"]
+  },
+  {
+    title: "Backend & APIs",
+    categoryIds: ["backend", "security"]
+  },
+  {
+    title: "Cloud & Infrastructure",
+    categoryIds: ["cloud", "devops"]
+  },
+  {
+    title: "Data, AI & Observability",
+    categoryIds: ["databases", "streaming", "ml-ai", "monitoring"]
+  },
+  {
+    title: "Frontend & Developer Tools",
+    categoryIds: ["frontend", "tools"]
+  }
 ];
 
+function getGroupSkills(categoryIds: StackGroup["categoryIds"]): string[] {
+  return SKILL_CATEGORIES.filter((category) => categoryIds.includes(category.id)).flatMap((category) => category.skills);
+}
+
 export default function Skills() {
-  const [active, setActive] = useState<SkillCategoryId>("all");
-  const visibleCategories = useMemo(
-    () => (active === "all" ? SKILL_CATEGORIES : SKILL_CATEGORIES.filter((category) => category.id === active)),
-    [active]
-  );
-
   return (
-    <section className="px-4 py-24 sm:px-6 lg:px-8">
+    <section id="skills" className="px-4 py-24 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        <SectionHeading
-          eyebrow="Skills"
-          title="Technical Skills"
-          subtitle="A backend-heavy toolkit across languages, services, cloud infrastructure, streaming, security, and observability."
-        />
-
-        <ScrollReveal>
-          <div className="mb-8 flex flex-wrap gap-3">
-            {FILTERS.map((filter) => (
-              <button
-                key={filter.id}
-                type="button"
-                aria-pressed={active === filter.id}
-                onClick={() => setActive(filter.id)}
-                className={cn(
-                  "rounded-xl border px-4 py-2 font-mono text-xs transition",
-                  active === filter.id
-                    ? "border-violet bg-violet text-white shadow-violet-glow"
-                    : "border-border bg-surface text-muted hover:border-violet/60 hover:text-foreground"
-                )}
-              >
-                {filter.label}
-              </button>
-            ))}
+        <ScrollReveal className="mb-12">
+          <div className="flex items-start gap-4">
+            <Code2 className="mt-2 h-8 w-8 shrink-0 text-cyan" aria-hidden="true" />
+            <div>
+              <p className="font-mono text-sm text-cyan">Technical Skills</p>
+              <h2 className="mt-1 text-3xl font-semibold leading-tight text-foreground sm:text-4xl">
+                Resume-aligned engineering stack
+              </h2>
+            </div>
           </div>
         </ScrollReveal>
 
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={active}
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -16 }}
-            transition={{ duration: 0.28 }}
-            className="grid gap-5 lg:grid-cols-2"
-          >
-            {visibleCategories.map((category, index) => (
-              <motion.article
-                key={category.id}
-                initial={{ opacity: 0, y: 18 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.06 }}
-                className="rounded-2xl border border-border bg-surface p-5 shadow-card-glow"
-              >
-                <h3 className="mb-4 text-lg font-semibold text-foreground">{category.label}</h3>
-                <div className="flex flex-wrap gap-3">
-                  {category.skills.map((skill) => (
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {STACK_GROUPS.map((group, index) => (
+            <ScrollReveal key={group.title} delay={index * 0.06}>
+              <article className="min-h-[232px] rounded-[1.5rem] border border-border bg-surface/70 p-6 shadow-card-glow transition duration-300 hover:border-cyan/35 hover:bg-surface hover:shadow-cyan-glow sm:p-7">
+                <h3 className="text-lg font-semibold text-foreground sm:text-xl">{group.title}</h3>
+                <div className="mt-6 flex flex-wrap gap-3">
+                  {getGroupSkills(group.categoryIds).map((skill) => (
                     <span
                       key={skill}
-                      className="rounded-full border border-border bg-background px-3 py-1.5 font-mono text-xs text-muted transition hover:border-violet/60 hover:text-violet hover:shadow-violet-glow"
+                      className="rounded-full border border-border bg-surface-muted/55 px-4 py-2 font-mono text-[11px] uppercase tracking-[0.16em] text-muted transition hover:border-cyan/40 hover:text-foreground sm:text-xs"
                     >
                       {skill}
                     </span>
                   ))}
                 </div>
-              </motion.article>
-            ))}
-          </motion.div>
-        </AnimatePresence>
+              </article>
+            </ScrollReveal>
+          ))}
+        </div>
       </div>
     </section>
   );

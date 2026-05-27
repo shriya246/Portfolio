@@ -5,7 +5,7 @@ import { ArrowDown, Download, Layers3 } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import ResumeModal from "@/components/ui/ResumeModal";
 
-const TITLES = ["Backend Engineer", "Cloud Architect", "Distributed Systems Developer"];
+const TITLES = ["Backend Engineer", "Cloud Architect", "Distributed Systems Developer", "Software Engineer", "AI/ML Engineer"];
 const FLOATING_CHIPS = ["Python", "Kafka", "Kubernetes", "AWS", "Redis"];
 
 export default function Hero() {
