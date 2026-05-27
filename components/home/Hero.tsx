@@ -72,6 +72,11 @@ export default function Hero() {
           Backend systems, cloud platforms, and resilient architecture
         </motion.div>
 
+        <div className="mb-6 min-h-12 font-mono text-xl text-violet-soft sm:text-2xl">
+          <span>{currentTitle.slice(0, visibleCharacters)}</span>
+          <span className="ml-1 inline-block h-6 w-0.5 translate-y-1 bg-cyan animate-blink" />
+        </div>
+
         <h1 className="max-w-5xl text-5xl font-semibold leading-[1.02] text-foreground sm:text-7xl lg:text-8xl">
           {letters.map((letter, index) => (
             <motion.span
@@ -85,11 +90,6 @@ export default function Hero() {
             </motion.span>
           ))}
         </h1>
-
-        <div className="mt-6 min-h-12 font-mono text-xl text-violet-soft sm:text-2xl">
-          <span>{currentTitle.slice(0, visibleCharacters)}</span>
-          <span className="ml-1 inline-block h-6 w-0.5 translate-y-1 bg-cyan animate-blink" />
-        </div>
 
         <motion.p
           initial={{ opacity: 0, y: 18 }}
