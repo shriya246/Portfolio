@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import ScrollReveal from "@/components/ui/ScrollReveal";
@@ -16,10 +17,14 @@ const STATS: StatItem[] = [
   { label: "Years Experience", value: 4, suffix: "+" },
   { label: "Publications", value: 2, suffix: "" },
   { label: "Projects", value: 10, suffix: "+" },
-  { label: "GPA", value: 4, suffix: "", decimals: 1 }
+  { label: "GPA", value: 4, suffix: "", decimals: 1 },
 ];
 
-function AnimatedCounter({ value, suffix, decimals = 0 }: Omit<StatItem, "label">) {
+function AnimatedCounter({
+  value,
+  suffix,
+  decimals = 0,
+}: Omit<StatItem, "label">) {
   const ref = useRef<HTMLSpanElement | null>(null);
   const inView = useInView(ref, { once: true, margin: "-60px" });
   const [displayValue, setDisplayValue] = useState(0);
@@ -70,10 +75,20 @@ export default function About() {
               <motion.div
                 className="absolute inset-0 rounded-[2rem] bg-radial-violet opacity-40"
                 animate={{ scale: [1, 1.04, 1], opacity: [0.25, 0.45, 0.25] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
               />
-              <div className="relative grid h-40 w-40 place-items-center rounded-full border border-violet/60 bg-background font-mono text-5xl font-bold text-gradient shadow-violet-glow">
-                SP
+              <div className="relative h-40 w-40 overflow-hidden rounded-full border border-violet/60 bg-background shadow-violet-glow">
+                <Image
+                  src="/profile-pic.png"
+                  alt="Shriya Patel"
+                  fill
+                  sizes="160px"
+                  className="object-cover"
+                />
               </div>
             </div>
           </ScrollReveal>
@@ -81,17 +96,27 @@ export default function About() {
           <ScrollReveal delay={0.12}>
             <div className="space-y-8">
               <p className="text-lg leading-8 text-muted">
-                I&apos;m a Software Engineer with 4+ years of experience building scalable backend systems, microservices,
-                and cloud-native applications. Currently at ServiceNow, I architect distributed platforms using Python,
-                Java, FastAPI, and Spring Boot, deployed on AWS and Kubernetes. I hold a Master&apos;s degree in Information
-                Technology from Arizona State University with a perfect 4.0 GPA, and have published research in Springer
+                I&apos;m a Software Engineer with 4+ years of experience
+                building scalable backend systems, microservices, and
+                cloud-native applications. Currently at ServiceNow, I architect
+                distributed platforms using Python, Java, FastAPI, and Spring
+                Boot, deployed on AWS and Kubernetes. I hold a Master&apos;s
+                degree in Information Technology from Arizona State University
+                with a perfect 4.0 GPA, and have published research in Springer
                 journals on AI and renewable energy systems.
               </p>
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                 {STATS.map((stat) => (
-                  <div key={stat.label} className="rounded-2xl border border-border bg-surface p-5 shadow-card-glow">
+                  <div
+                    key={stat.label}
+                    className="rounded-2xl border border-border bg-surface p-5 shadow-card-glow"
+                  >
                     <div className="font-mono text-3xl font-bold text-violet-soft">
-                      <AnimatedCounter value={stat.value} suffix={stat.suffix} decimals={stat.decimals} />
+                      <AnimatedCounter
+                        value={stat.value}
+                        suffix={stat.suffix}
+                        decimals={stat.decimals}
+                      />
                     </div>
                     <p className="mt-2 text-sm text-muted">{stat.label}</p>
                   </div>
