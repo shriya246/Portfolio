@@ -21,7 +21,8 @@ export default function ContactInfo() {
       <div className="space-y-8">
         <p className="text-lg leading-8 text-muted">
           I&apos;m currently open to full-time Software Engineering roles, research collaborations, and interesting
-          conversations about distributed systems and cloud architecture.
+          conversations about distributed systems and cloud architecture. Based in Tempe, Arizona, and open to
+          relocation.
         </p>
 
         <div className="space-y-4">
@@ -56,7 +57,7 @@ export default function ContactInfo() {
             <MapPin className="h-5 w-5 text-violet" />
             <span>
               <span className="block text-sm text-muted">Location</span>
-              <span className="font-medium text-foreground">Phoenix, Arizona, USA</span>
+              <span className="font-medium text-foreground">Tempe, Arizona, USA</span>
             </span>
           </div>
         </div>

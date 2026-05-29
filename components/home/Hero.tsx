@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowDown, Download, Layers3 } from "lucide-react";
+import { ArrowDown, Download, Layers3, MapPin, Plane } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import ResumeModal from "@/components/ui/ResumeModal";
 
@@ -99,6 +99,22 @@ export default function Hero() {
         >
           Building resilient distributed systems and cloud-native applications that scale.
         </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 18 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.7, duration: 0.6 }}
+          className="mt-5 flex flex-wrap gap-3 text-sm font-medium text-muted"
+        >
+          <span className="inline-flex items-center gap-2 rounded-full border border-border bg-surface/80 px-4 py-2">
+            <MapPin className="h-4 w-4 text-cyan" />
+            Tempe, AZ
+          </span>
+          <span className="inline-flex items-center gap-2 rounded-full border border-border bg-surface/80 px-4 py-2">
+            <Plane className="h-4 w-4 text-cyan" />
+            Open to relocation
+          </span>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 18 }}
