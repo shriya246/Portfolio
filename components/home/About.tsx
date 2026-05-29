@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
+import { MapPin, Plane } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -81,14 +82,26 @@ export default function About() {
                   ease: "easeInOut",
                 }}
               />
-              <div className="relative h-40 w-40 overflow-hidden rounded-full border border-violet/60 bg-background shadow-violet-glow">
-                <Image
-                  src="/profile-pic.png"
-                  alt="Shriya Patel"
-                  fill
-                  sizes="160px"
-                  className="object-cover"
-                />
+              <div className="relative z-10 flex flex-col items-center gap-4">
+                <div className="relative h-40 w-40 overflow-hidden rounded-full border border-violet/60 bg-background shadow-violet-glow">
+                  <Image
+                    src="/profile-pic.png"
+                    alt="Shriya Patel"
+                    fill
+                    sizes="160px"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="flex flex-col items-center gap-2 text-sm font-medium text-muted">
+                  <span className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-4 py-2">
+                    <MapPin className="h-4 w-4 text-cyan" />
+                    Tempe, AZ
+                  </span>
+                  <span className="inline-flex items-center gap-2 rounded-full border border-border bg-background/70 px-4 py-2">
+                    <Plane className="h-4 w-4 text-cyan" />
+                    [Open to Relocation]
+                  </span>
+                </div>
               </div>
             </div>
           </ScrollReveal>
