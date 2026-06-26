@@ -8,12 +8,13 @@ export const EXPERIENCE: ExperienceItem[] = [
     period: "November 2024 — Present",
     current: true,
     bullets: [
-      "Architected and deployed scalable microservices using Python (FastAPI) and Node.js on AWS Lambda and Kubernetes, improving system scalability for high-volume enterprise workflows",
-      "Designed high-performance REST and gRPC APIs integrated with PostgreSQL and Redis, reducing API response latency by 32% through caching and query optimization",
-      "Implemented event-driven communication using Apache Kafka and AWS SNS, reducing inter-service bottlenecks by 28% and improving real-time processing reliability",
-      "Automated containerized deployments using Docker, Amazon EKS, and CI/CD pipelines, decreasing release failures by 25%",
-      "Strengthened application security by implementing OAuth2, JWT, and RBAC authentication across distributed systems",
-      "Built centralized observability pipelines with Kubernetes logging, metrics, and troubleshooting dashboards"
+      "Designed and built backend services using Python with FastAPI and Flask, delivering 9 microservices to support data ingestion, transformation, and core business logic across internal workflows",
+      "Managed transactional data in SQL Server, writing optimized queries and stored procedures to support high-volume operations and reporting needs",
+      "Developed a GraphQL aggregation layer that unified data from SQL Server and DynamoDB, enabling frontend clients to retrieve combined datasets in a single request and improving response times significantly",
+      "Integrated services with AWS, using SQS for message queuing between distributed components and S3 for secure file storage and backup. Deployed AWS Lambda to automate data validation and cleansing tasks, processing an average of 400 records per day",
+      "Wrote unit and integration tests using Python's unittest framework, achieving over 90% test coverage. Used mocking and stubs to isolate service dependencies and support test-driven development",
+      "Containerized all services with Docker to maintain consistent runtime environments across development, staging, and production. Set up CI/CD pipelines using Jenkins to automate builds, tests, and deployments, reducing release cycle time",
+      "Built internal automation scripts and CLI tools in Python to handle routine database maintenance and deployment checks, saving the team approximately 4 hours of manual effort per week"
     ]
   },
   {
@@ -23,12 +24,12 @@ export const EXPERIENCE: ExperienceItem[] = [
     period: "January 2021 — July 2023",
     current: false,
     bullets: [
-      "Developed a cloud-based log analytics platform using C#/.NET Core and C++, processing over 1M+ log events daily",
-      "Engineered scalable backend services using Spring Boot and .NET Core integrated with MySQL and MongoDB",
-      "Built real-time streaming pipelines using Apache Kafka, increasing system throughput by 30%",
-      "Developed responsive frontend components using React and TypeScript, improving user engagement by 20%",
-      "Optimized PostgreSQL and DynamoDB queries, reducing execution time by 35%",
-      "Designed multithreaded C++ modules for high-speed log parsing and caching"
+      "Developed a cloud-based log analytics platform using C#/.NET Core and C++, processing over 1M+ log events daily with optimized backend performance",
+      "Engineered scalable backend services using Spring Boot and .NET Core integrated with MySQL and MongoDB for high-volume enterprise applications",
+      "Built real-time streaming pipelines using Apache Kafka, increasing system throughput by 30% and improving data processing efficiency",
+      "Developed responsive frontend components using React and TypeScript, improving application usability and user engagement by 20%",
+      "Optimized PostgreSQL and DynamoDB database queries, reducing execution time by 35% and improving application responsiveness",
+      "Designed multithreaded C++ modules for high-speed log parsing and caching, enhancing processing efficiency for large-scale datasets"
     ]
   }
 ];

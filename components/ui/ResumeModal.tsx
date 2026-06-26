@@ -9,7 +9,7 @@ interface ResumeModalProps {
   onClose: () => void;
 }
 
-const RESUME_FILE_PATH = "/Shriya_Patel_Software_Engineer_Resume.pdf";
+const RESUME_FILE_PATH = "/Shriya Patel SE.pdf";
 
 export default function ResumeModal({ open, onClose }: ResumeModalProps) {
   useEffect(() => {
@@ -57,7 +57,7 @@ export default function ResumeModal({ open, onClose }: ResumeModalProps) {
               <p className="hidden font-mono text-xs uppercase tracking-[0.28em] text-muted sm:block">Resume Preview</p>
               <a
                 href={RESUME_FILE_PATH}
-                download="shriya-patel-resume.pdf"
+                download="Shriya Patel SE.pdf"
                 aria-label="Download Shriya Patel resume"
                 className="inline-flex items-center gap-2 rounded-xl bg-violet px-4 py-2 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:shadow-violet-glow"
               >
