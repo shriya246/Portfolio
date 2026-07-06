@@ -5,8 +5,8 @@ import { ArrowDown, Download, Layers3 } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import ResumeModal from "@/components/ui/ResumeModal";
 
-const TITLES = ["Backend Engineer", "Cloud Architect", "Distributed Systems Developer", "Software Engineer", "AI/ML Engineer"];
-const FLOATING_CHIPS = ["Python", "Kafka", "Kubernetes", "AWS", "Redis"];
+const TITLES = ["Product Manager", "AI Platform PM", "Enterprise SaaS PM", "0-to-1 Builder", "Product Strategy Lead"];
+const FLOATING_CHIPS = ["Now Assist", "AI Governance", "Roadmaps", "Mixpanel", "Figma"];
 
 export default function Hero() {
   const [titleIndex, setTitleIndex] = useState(0);
@@ -69,7 +69,7 @@ export default function Hero() {
           className="mb-7 inline-flex items-center gap-3 rounded-full border border-violet/30 bg-violet/10 px-4 py-2 text-sm text-violet-soft shadow-violet-glow"
         >
           <Layers3 className="h-4 w-4" />
-          Backend systems, cloud platforms, and resilient architecture
+          Enterprise AI products, SaaS platforms, and measurable adoption
         </motion.div>
 
         <div className="mb-6 min-h-12 font-mono text-xl text-violet-soft sm:text-2xl">
@@ -97,7 +97,7 @@ export default function Hero() {
           transition={{ delay: 0.62, duration: 0.6 }}
           className="mt-6 max-w-2xl text-lg leading-8 text-muted sm:text-xl"
         >
-          Building resilient distributed systems and cloud-native applications that scale.
+          Product Manager shipping enterprise SaaS and AI-powered products from discovery and PRD through deployed code.
         </motion.p>
 
         <motion.div
@@ -108,11 +108,11 @@ export default function Hero() {
         >
           <button
             type="button"
-            aria-label="View featured projects"
+            aria-label="View featured case studies"
             onClick={scrollToProjects}
             className="inline-flex items-center justify-center rounded-2xl bg-violet px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-1 hover:shadow-violet-glow"
           >
-            View My Work
+            View Case Studies
           </button>
           <button
             type="button"

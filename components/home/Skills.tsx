@@ -9,24 +9,24 @@ interface StackGroup {
 
 const STACK_GROUPS: StackGroup[] = [
   {
-    title: "Languages",
-    categoryIds: ["languages"]
+    title: "AI Product Depth",
+    categoryIds: ["ai-ml"]
   },
   {
-    title: "Backend & APIs",
-    categoryIds: ["backend", "security"]
+    title: "Product Management",
+    categoryIds: ["product"]
   },
   {
-    title: "Cloud & Infrastructure",
-    categoryIds: ["cloud", "devops"]
+    title: "Analytics & Measurement",
+    categoryIds: ["data-analytics"]
   },
   {
-    title: "Data, AI & Observability",
-    categoryIds: ["databases", "streaming", "ml-ai", "monitoring"]
+    title: "Builder Toolkit",
+    categoryIds: ["building-tooling"]
   },
   {
-    title: "Frontend & Developer Tools",
-    categoryIds: ["frontend", "tools"]
+    title: "Leadership & Delivery",
+    categoryIds: ["leadership", "tools"]
   }
 ];
 
@@ -42,9 +42,9 @@ export default function Skills() {
           <div className="flex items-start gap-4">
             <Code2 className="mt-2 h-8 w-8 shrink-0 text-cyan" aria-hidden="true" />
             <div>
-              <p className="font-mono text-sm text-cyan">Technical Skills</p>
+              <p className="font-mono text-sm text-cyan">Product Skills</p>
               <h2 className="mt-1 text-3xl font-semibold leading-tight text-foreground sm:text-4xl">
-                Resume-aligned engineering stack
+                Resume-aligned product, AI, and analytics toolkit
               </h2>
             </div>
           </div>

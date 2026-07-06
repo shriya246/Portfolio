@@ -3,7 +3,7 @@
 import type { ProjectFilter } from "@/types";
 import { cn } from "@/lib/utils";
 
-const FILTERS: ProjectFilter[] = ["All", "Backend", "Cloud", "Machine Learning", "IoT", "Real-Time"];
+const FILTERS: ProjectFilter[] = ["All", "AI Products", "SaaS", "Analytics", "Roadmap", "Go-to-Market", "Cloud"];
 
 interface FilterBarProps {
   activeFilter: ProjectFilter;

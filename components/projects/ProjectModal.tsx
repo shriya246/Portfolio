@@ -93,7 +93,7 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
             </div>
 
             <section className="mt-6 rounded-2xl border border-border bg-background p-5">
-              <h3 className="font-mono text-xs uppercase tracking-[0.24em] text-violet-soft">Architecture Decisions</h3>
+              <h3 className="font-mono text-xs uppercase tracking-[0.24em] text-violet-soft">Product Decisions</h3>
               <ul className="mt-4 grid gap-3 text-sm leading-7 text-muted">
                 {project.architectureDecisions.map((decision) => (
                   <li key={decision} className="flex gap-3">
@@ -115,18 +115,20 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
               </div>
             </section>
 
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noreferrer"
-                aria-label={`Open ${project.name} source`}
-                className="inline-flex items-center justify-center gap-2 rounded-xl bg-violet px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:shadow-violet-glow"
-              >
-                <Github className="h-4 w-4" />
-                GitHub
-              </a>
-            </div>
+            {project.github ? (
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`Open ${project.name} source`}
+                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-violet px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:shadow-violet-glow"
+                >
+                  <Github className="h-4 w-4" />
+                  GitHub
+                </a>
+              </div>
+            ) : null}
           </motion.article>
         </motion.div>
       ) : null}

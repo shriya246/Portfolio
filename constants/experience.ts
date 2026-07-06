@@ -4,32 +4,29 @@ export const EXPERIENCE: ExperienceItem[] = [
   {
     company: "ServiceNow",
     location: "USA",
-    role: "Software Engineer",
-    period: "November 2024 — Present",
+    role: "Product Manager - Enterprise AI Platform, Now Assist, AI Control Tower, Agent Studio",
+    period: "November 2024 - Present",
     current: true,
     bullets: [
-      "Designed and built backend services using Python with FastAPI and Flask, delivering 9 microservices to support data ingestion, transformation, and core business logic across internal workflows",
-      "Managed transactional data in SQL Server, writing optimized queries and stored procedures to support high-volume operations and reporting needs",
-      "Developed a GraphQL aggregation layer that unified data from SQL Server and DynamoDB, enabling frontend clients to retrieve combined datasets in a single request and improving response times significantly",
-      "Integrated services with AWS, using SQS for message queuing between distributed components and S3 for secure file storage and backup. Deployed AWS Lambda to automate data validation and cleansing tasks, processing an average of 400 records per day",
-      "Wrote unit and integration tests using Python's unittest framework, achieving over 90% test coverage. Used mocking and stubs to isolate service dependencies and support test-driven development",
-      "Containerized all services with Docker to maintain consistent runtime environments across development, staging, and production. Set up CI/CD pipelines using Jenkins to automate builds, tests, and deployments, reducing release cycle time",
-      "Built internal automation scripts and CLI tools in Python to handle routine database maintenance and deployment checks, saving the team approximately 4 hours of manual effort per week"
+      "Scaled AI agent adoption org-wide by leading enterprise rollout of 60+ Now Assist agents across ITSM, HRSD, and CRM, moving a 40-person pilot to 600+ active users in 10 weeks and achieving 38% ticket deflection with $2.1M in cost avoidance",
+      "Defined and drove AI Control Tower framework adoption across 14 business teams, enabling agentic AI deployment with RBAC, compliance, and auditability while compressing governance review cycles from 3 weeks to 4 days",
+      "Deployed change management and SecOps AI agents via Agent Studio, automating repetitive incident workflows and driving a 42% reduction in mean time to resolution across 3 business units",
+      "Partnered with platform and data teams to remediate 10,000+ CSDM and knowledge base records as AI readiness prerequisites, reducing LLM hallucination risk and improving Now Assist response accuracy by 22%",
+      "Established data quality standards and alignment protocols across platform, security, and content teams, resolving cross-functional blockers and enabling 3 previously stalled AI feature launches to ship on schedule"
     ]
   },
   {
-    company: "Disha Enterprise",
+    company: "Infinite Infolab",
     location: "India",
-    role: "Software Engineer",
-    period: "January 2021 — July 2023",
+    role: "Product Manager - B2B Field Service Management SaaS, OmniServe Platform",
+    period: "January 2021 - July 2023",
     current: false,
     bullets: [
-      "Developed a cloud-based log analytics platform using C#/.NET Core and C++, processing over 1M+ log events daily with optimized backend performance",
-      "Engineered scalable backend services using Spring Boot and .NET Core integrated with MySQL and MongoDB for high-volume enterprise applications",
-      "Built real-time streaming pipelines using Apache Kafka, increasing system throughput by 30% and improving data processing efficiency",
-      "Developed responsive frontend components using React and TypeScript, improving application usability and user engagement by 20%",
-      "Optimized PostgreSQL and DynamoDB database queries, reducing execution time by 35% and improving application responsiveness",
-      "Designed multithreaded C++ modules for high-speed log parsing and caching, enhancing processing efficiency for large-scale datasets"
+      "Owned the full OmniServe roadmap across 18 sprints, introducing early risk flagging that achieved 98% sprint commitment, cut cross-team disruptions by 60%, and unlocked onboarding of 5 enterprise clients in Q4",
+      "Led a research-driven UX redesign through 4 usability testing cycles with 20+ users in Figma, increasing task completion rate by 28% and reducing new-user onboarding time from 3 days to under 8 hours",
+      "Built a Mixpanel and Google Analytics framework, identified SLA visibility gaps, and launched automated alerts that reduced resolution time by 40% and prevented churn of 3 enterprise clients worth approximately $180K ARR",
+      "Shipped an API-driven real-time field agent tracking feature 2 weeks early by defining API contracts and aligning Node.js and Flutter teams through Postman, contributing directly to a $33K contract renewal",
+      "Led a zero-downtime migration from on-prem infrastructure to AWS EC2, RDS, and S3 in 6 weeks, reducing downtime by 90%, raising CSAT from 3.6 to 4.4/5, and supporting 5 enterprise client onboardings in one quarter"
     ]
   }
 ];

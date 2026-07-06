@@ -21,16 +21,18 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://shriya-patel-portfolio.vercel.app"),
   title: {
-    default: "Shriya Patel — Software Engineer",
+    default: "Shriya Patel - Product Manager",
     template: "%s | Shriya Patel"
   },
-  description: "Software Engineer specializing in distributed systems, cloud-native applications, and backend engineering.",
+  description:
+    "Product Manager specializing in enterprise AI platforms, SaaS products, AI governance, analytics, and cross-functional product execution.",
   alternates: {
     canonical: "/"
   },
   openGraph: {
-    title: "Shriya Patel — Software Engineer",
-    description: "Software Engineer specializing in distributed systems, cloud-native applications, and backend engineering.",
+    title: "Shriya Patel - Product Manager",
+    description:
+      "Product Manager specializing in enterprise AI platforms, SaaS products, AI governance, analytics, and cross-functional product execution.",
     url: "https://shriya-patel-portfolio.vercel.app",
     siteName: "Shriya Patel Portfolio",
     type: "website",
@@ -38,8 +40,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Shriya Patel — Software Engineer",
-    description: "Software Engineer specializing in distributed systems, cloud-native applications, and backend engineering."
+    title: "Shriya Patel - Product Manager",
+    description:
+      "Product Manager specializing in enterprise AI platforms, SaaS products, AI governance, analytics, and cross-functional product execution."
   }
 };
 

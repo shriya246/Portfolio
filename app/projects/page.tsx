@@ -24,9 +24,9 @@ export default function ProjectsPage() {
     <main className="px-4 pb-24 pt-32 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <SectionHeading
-          eyebrow="Project Archive"
-          title="All Projects"
-          subtitle="A focused collection of backend, cloud, IoT, real-time, and machine learning systems with measurable engineering outcomes."
+          eyebrow="Case Study Archive"
+          title="Product Case Studies"
+          subtitle="A focused collection of AI platform, SaaS, analytics, roadmap, and go-to-market work with measurable product outcomes."
         />
         <FilterBar activeFilter={activeFilter} onChange={setActiveFilter} />
 

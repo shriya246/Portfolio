@@ -3,9 +3,9 @@ import Link from "next/link";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
 
 const SOCIAL_LINKS = [
-  { href: "https://github.com/shriya-patel", label: "GitHub", icon: FaGithub },
-  { href: "https://www.linkedin.com/in/shriya-patel", label: "LinkedIn", icon: FaLinkedinIn },
-  { href: "mailto:shriya2223@zohomail.com", label: "Email", icon: Mail }
+  { href: "https://github.com/shriya246", label: "GitHub", icon: FaGithub },
+  { href: "https://www.linkedin.com/in/shriya-p8/", label: "LinkedIn", icon: FaLinkedinIn },
+  { href: "mailto:shriya.p@itjobinbox.com", label: "Email", icon: Mail }
 ];
 
 export default function Footer() {
@@ -35,7 +35,7 @@ export default function Footer() {
           })}
         </div>
         <p className="text-sm text-muted">Built with Next.js and deployed on Vercel</p>
-        <p className="text-xs text-muted">© {year} Shriya Patel. All rights reserved.</p>
+        <p className="text-xs text-muted">&copy; {year} Shriya Patel. All rights reserved.</p>
       </div>
     </footer>
   );

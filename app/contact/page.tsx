@@ -9,7 +9,7 @@ export default function ContactPage() {
         <SectionHeading
           eyebrow="Contact"
           title="Let&apos;s Connect"
-          subtitle="Reach out for engineering roles, research conversations, or collaboration around distributed systems and cloud architecture."
+          subtitle="Reach out for product management roles, AI platform conversations, SaaS collaboration, or enterprise product strategy work."
         />
         <div className="grid gap-10 lg:grid-cols-[0.88fr_1.12fr]">
           <ContactInfo />

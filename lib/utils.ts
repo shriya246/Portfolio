@@ -10,7 +10,8 @@ export interface TextSegment {
   metric: boolean;
 }
 
-const METRIC_PATTERN = /(\d+(?:\.\d+)?%|\d+(?:\.\d+)?\+?M\+?|\d+\+|95-100%|99%|4\.0)/g;
+const METRIC_PATTERN =
+  /(95-100%|99%|\d+(?:\.\d+)?%|\d+\+|\$?\d+(?:\.\d+)?\s?(?:M|K|ARR)?|\d+(?:\.\d+)?\/5|4\.0)/g;
 
 export function splitMetricText(text: string): TextSegment[] {
   const segments: TextSegment[] = [];

@@ -5,7 +5,7 @@ import { useState } from "react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
-const EMAIL = "shriya2223@zohomail.com";
+const EMAIL = "shriya.p@itjobinbox.com";
 
 export default function ContactInfo() {
   const [copied, setCopied] = useState(false);
@@ -20,9 +20,9 @@ export default function ContactInfo() {
     <ScrollReveal>
       <div className="space-y-8">
         <p className="text-lg leading-8 text-muted">
-          I&apos;m currently open to full-time Software Engineering roles, research collaborations, and interesting
-          conversations about distributed systems and cloud architecture. Based in Tempe, Arizona, and open to
-          relocation.
+          I&apos;m currently open to full-time Product Manager roles, AI platform conversations, and collaboration
+          around enterprise SaaS, governance, analytics, and applied AI products. Based in Tempe, Arizona, and
+          open to relocation.
         </p>
 
         <div className="space-y-4">
@@ -43,13 +43,13 @@ export default function ContactInfo() {
           </button>
 
           <a
-            href="tel:+16023415263"
+            href="tel:+18019602189"
             className="flex items-center gap-3 rounded-2xl border border-border bg-surface p-4 transition hover:border-violet/60 hover:shadow-violet-glow"
           >
             <Phone className="h-5 w-5 text-violet" />
             <span>
               <span className="block text-sm text-muted">Phone</span>
-              <span className="font-medium text-foreground">602-341-5263</span>
+              <span className="font-medium text-foreground">801-960-2189</span>
             </span>
           </a>
 
@@ -64,7 +64,7 @@ export default function ContactInfo() {
 
         <div className="flex gap-3">
           <a
-            href="https://www.linkedin.com/in/shriya-patel"
+            href="https://www.linkedin.com/in/shriya-p8/"
             target="_blank"
             rel="noreferrer"
             aria-label="Open LinkedIn profile"
@@ -73,7 +73,7 @@ export default function ContactInfo() {
             <FaLinkedinIn className="h-5 w-5" />
           </a>
           <a
-            href="https://github.com/shriya-patel"
+            href="https://github.com/shriya246"
             target="_blank"
             rel="noreferrer"
             aria-label="Open GitHub profile"

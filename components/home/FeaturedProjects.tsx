@@ -10,8 +10,8 @@ export default function FeaturedProjects() {
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="Projects"
-          title="Featured Projects"
-          subtitle="Selected systems work spanning real-time messaging, cloud IoT pipelines, and production-ready machine learning."
+          title="Featured Product Case Studies"
+          subtitle="Selected product work across enterprise AI adoption, governance frameworks, analytics, and B2B SaaS execution."
         />
 
         <div className="grid gap-6 lg:grid-cols-3">
@@ -35,16 +35,18 @@ export default function FeaturedProjects() {
                       </span>
                     ))}
                   </div>
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label={`Open ${project.name} on GitHub`}
-                    className="mt-6 inline-flex w-fit items-center gap-2 rounded-xl border border-border bg-background px-4 py-2 text-sm font-semibold text-foreground transition hover:border-violet/60 hover:text-violet"
-                  >
-                    <Github className="h-4 w-4" />
-                    GitHub
-                  </a>
+                  {project.github ? (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`Open ${project.name} on GitHub`}
+                      className="mt-6 inline-flex w-fit items-center gap-2 rounded-xl border border-border bg-background px-4 py-2 text-sm font-semibold text-foreground transition hover:border-violet/60 hover:text-violet"
+                    >
+                      <Github className="h-4 w-4" />
+                      GitHub
+                    </a>
+                  ) : null}
                 </div>
               </article>
             </ScrollReveal>

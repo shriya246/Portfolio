@@ -12,7 +12,7 @@ export default function CTABanner() {
               <p className="font-mono text-xs uppercase tracking-[0.28em] text-white/75">Available for the right next chapter</p>
               <h2 className="mt-4 text-3xl font-semibold text-white sm:text-5xl">Open to new opportunities</h2>
               <p className="mt-5 text-base leading-8 text-white/82 sm:text-lg">
-                Whether it&apos;s a full-time role, collaboration, or research discussion — let&apos;s connect.
+                Whether it&apos;s a full-time PM role, AI platform collaboration, or SaaS product discussion, let&apos;s connect.
               </p>
               <Link
                 href="/contact"

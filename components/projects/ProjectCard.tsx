@@ -45,17 +45,19 @@ export default function ProjectCard({ project, onSelect }: ProjectCardProps) {
         ))}
       </div>
       <div className="mt-6 flex flex-wrap gap-3">
-        <a
-          href={project.github}
-          target="_blank"
-          rel="noreferrer"
-          aria-label={`Open ${project.name} on GitHub`}
-          onClick={(event) => event.stopPropagation()}
-          className="inline-flex items-center gap-2 rounded-xl border border-border bg-background px-4 py-2 text-sm font-semibold text-foreground transition hover:border-violet/60 hover:text-violet"
-        >
-          <Github className="h-4 w-4" />
-          GitHub
-        </a>
+        {project.github ? (
+          <a
+            href={project.github}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`Open ${project.name} on GitHub`}
+            onClick={(event) => event.stopPropagation()}
+            className="inline-flex items-center gap-2 rounded-xl border border-border bg-background px-4 py-2 text-sm font-semibold text-foreground transition hover:border-violet/60 hover:text-violet"
+          >
+            <Github className="h-4 w-4" />
+            GitHub
+          </a>
+        ) : null}
         <span className="ml-auto inline-flex items-center gap-2 rounded-xl px-2 py-2 text-sm font-semibold text-cyan">
           <Maximize2 className="h-4 w-4" />
           Details

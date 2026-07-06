@@ -16,8 +16,8 @@ interface StatItem {
 
 const STATS: StatItem[] = [
   { label: "Years Experience", value: 4, suffix: "+" },
-  { label: "Publications", value: 2, suffix: "" },
-  { label: "Projects", value: 10, suffix: "+" },
+  { label: "AI Agents Rolled Out", value: 60, suffix: "+" },
+  { label: "Active Users Enabled", value: 600, suffix: "+" },
   { label: "GPA", value: 4, suffix: "", decimals: 1 },
 ];
 
@@ -65,8 +65,8 @@ export default function About() {
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="About"
-          title="Engineering durable systems with research-minded precision."
-          subtitle="A backend-first portfolio shaped by distributed architecture, cloud platforms, and measurable impact."
+          title="Building AI products that move from strategy to shipped outcomes."
+          subtitle="A product portfolio shaped by enterprise AI adoption, SaaS roadmaps, user research, analytics, and measurable operational impact."
         />
 
         <div className="grid items-center gap-12 lg:grid-cols-[0.86fr_1.14fr]">
@@ -109,14 +109,14 @@ export default function About() {
           <ScrollReveal delay={0.12}>
             <div className="space-y-8">
               <p className="text-lg leading-8 text-muted">
-                I&apos;m a Software Engineer with 4+ years of experience
-                building scalable backend systems, microservices, and
-                cloud-native applications. Currently at ServiceNow, I architect
-                distributed platforms using Python, Java, FastAPI, and Spring
-                Boot, deployed on AWS and Kubernetes. I hold a Master&apos;s
-                degree in Information Technology from Arizona State University
-                with a perfect 4.0 GPA, and have published research in Springer
-                journals on AI and renewable energy systems.
+                I&apos;m a Product Manager with 4+ years of experience shipping
+                enterprise SaaS and AI-powered products end to end, from
+                discovery and PRDs through deployed code. At ServiceNow, I lead
+                enterprise AI platform work across Now Assist, AI Control Tower,
+                and Agent Studio, with hands-on experience in LLM integration,
+                RAG, WebRTC, analytics, governance, and cross-functional launch
+                execution. I hold a Master&apos;s degree in Information Technology
+                from Arizona State University with a 4.0 GPA.
               </p>
               <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
                 {STATS.map((stat) => (

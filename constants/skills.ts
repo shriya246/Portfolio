@@ -2,82 +2,57 @@ import type { SkillCategory } from "@/types";
 
 export const SKILL_CATEGORIES: SkillCategory[] = [
   {
-    id: "languages",
-    label: "Languages",
-    skills: ["Python", "Java", "C++", "C#", "SQL", "JavaScript", "TypeScript"]
-  },
-  {
-    id: "backend",
-    label: "Backend",
+    id: "ai-ml",
+    label: "AI & Machine Learning",
     skills: [
-      "FastAPI",
-      "Spring Boot",
-      "Django",
-      "Node.js",
-      "Express.js",
-      ".NET Core",
-      "REST APIs",
-      "gRPC",
-      "Microservices Architecture",
-      "System Design"
+      "LLM Integration",
+      "Claude API",
+      "OpenAI",
+      "RAG Pipelines",
+      "Agentic AI Workflows",
+      "Prompt Engineering",
+      "AI Governance",
+      "Responsible AI",
+      "LLM Evaluation"
     ]
   },
   {
-    id: "frontend",
-    label: "Frontend",
-    skills: ["React.js", "Next.js", "HTML5", "CSS3"]
-  },
-  {
-    id: "cloud",
-    label: "Cloud",
+    id: "product",
+    label: "Product Management",
     skills: [
-      "AWS Lambda",
-      "EC2",
-      "S3",
-      "SNS",
-      "SES",
-      "EKS",
-      "Azure Functions",
-      "AKS",
-      "Blob Storage",
-      "Service Bus",
-      "Event-Driven Architecture",
-      "Distributed Systems"
+      "Product Strategy",
+      "Product Vision",
+      "Roadmap Planning",
+      "PRDs",
+      "User Stories",
+      "Backlog Management",
+      "Sprint Planning",
+      "Feature Prioritization",
+      "Go-to-Market",
+      "A/B Testing",
+      "Competitive Analysis",
+      "Market Research",
+      "OKRs"
     ]
   },
   {
-    id: "devops",
-    label: "DevOps",
-    skills: ["Docker", "Kubernetes", "Jenkins", "GitHub Actions", "Azure DevOps", "CI/CD Pipelines", "Linux", "Bash"]
+    id: "data-analytics",
+    label: "Data & Analytics",
+    skills: ["SQL", "Power BI", "Tableau", "Mixpanel", "Google Analytics"]
   },
   {
-    id: "databases",
-    label: "Databases",
-    skills: ["MySQL", "PostgreSQL", "MongoDB", "DynamoDB", "Redis"]
+    id: "building-tooling",
+    label: "Building & Tooling",
+    skills: ["React", "Vite", "Node.js", "Python", "REST APIs", "AWS EC2", "AWS RDS", "AWS S3", "Figma", "Jira", "Confluence", "CI/CD", "Postman"]
   },
   {
-    id: "streaming",
-    label: "Streaming",
-    skills: ["Apache Kafka", "Apache Spark", "Hadoop"]
-  },
-  {
-    id: "ml-ai",
-    label: "ML/AI",
-    skills: ["TensorFlow", "PyTorch", "Scikit-learn", "NLP", "Computer Vision", "MLflow"]
-  },
-  {
-    id: "security",
-    label: "Security",
-    skills: ["OAuth2", "JWT", "RBAC", "TLS", "AES Encryption"]
-  },
-  {
-    id: "monitoring",
-    label: "Monitoring",
-    skills: ["Prometheus", "Grafana", "ELK Stack", "CloudWatch", "Logging and Metrics"]
+    id: "leadership",
+    label: "Leadership",
+    skills: ["Stakeholder Management", "User Research", "Usability Testing", "UAT", "Cross-functional Leadership", "Agile", "Scrum", "SAFe"]
   },
   {
     id: "tools",
     label: "Tools",
-    skills: ["Git", "GitHub", "Maven", "Gradle", "Postman", "VS Code", "IntelliJ IDEA"]
+    skills: ["Figma", "Jira", "Confluence", "Postman", "Mixpanel", "Google Analytics", "Power BI", "Tableau"]
   }
 ];

@@ -2,16 +2,11 @@ import type { ReactNode } from "react";
 
 export type SkillCategoryId =
   | "all"
-  | "languages"
-  | "backend"
-  | "frontend"
-  | "cloud"
-  | "devops"
-  | "databases"
-  | "streaming"
-  | "ml-ai"
-  | "security"
-  | "monitoring"
+  | "ai-ml"
+  | "product"
+  | "data-analytics"
+  | "building-tooling"
+  | "leadership"
   | "tools";
 
 export interface SkillCategory {
@@ -29,9 +24,9 @@ export interface ExperienceItem {
   bullets: string[];
 }
 
-export type ProjectCategory = "Backend" | "Cloud" | "Real-Time" | "IoT" | "Machine Learning" | "AI" | "Python";
+export type ProjectCategory = "AI Products" | "SaaS" | "Analytics" | "Roadmap" | "Go-to-Market" | "Cloud";
 
-export type ProjectFilter = "All" | "Backend" | "Cloud" | "Machine Learning" | "IoT" | "Real-Time";
+export type ProjectFilter = "All" | "AI Products" | "SaaS" | "Analytics" | "Roadmap" | "Go-to-Market" | "Cloud";
 
 export interface Project {
   id: string;
@@ -39,7 +34,7 @@ export interface Project {
   description: string;
   tech: string[];
   highlights: string[];
-  github: string;
+  github: string | null;
   live: string | null;
   categories: ProjectCategory[];
   problemStatement: string;

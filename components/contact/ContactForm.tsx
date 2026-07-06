@@ -78,7 +78,7 @@ export default function ContactForm() {
           from_email: form.email,
           subject: form.subject,
           message: form.message,
-          to_email: "shriya2223@zohomail.com"
+          to_email: "shriya.p@itjobinbox.com"
         },
         { publicKey }
       );
@@ -125,7 +125,7 @@ export default function ContactForm() {
             onChange={(event) => updateField("subject", event.target.value)}
             required
             className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm text-foreground transition placeholder:text-muted/70 hover:border-violet/50"
-            placeholder="Opportunity, collaboration, or research discussion"
+            placeholder="PM role, AI platform, or SaaS product discussion"
           />
         </label>
 

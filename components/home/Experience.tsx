@@ -30,7 +30,7 @@ export default function Experience() {
         <SectionHeading
           eyebrow="Experience"
           title="Professional Experience"
-          subtitle="Engineering roles centered on scalable services, event-driven communication, cloud deployments, and operational reliability."
+          subtitle="Product roles centered on enterprise AI adoption, SaaS roadmap ownership, user research, analytics, governance, and cross-functional execution."
         />
 
         <div className="relative ml-3 space-y-8 border-l border-violet/45 pl-7 sm:ml-6 sm:pl-10">
