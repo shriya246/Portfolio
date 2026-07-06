@@ -2,6 +2,58 @@ import type { Project } from "@/types";
 
 export const PROJECTS: Project[] = [
   {
+    id: "customer-voice-intelligence-platform",
+    name: "Customer Voice Intelligence Platform",
+    description:
+      "Independent full-stack build that turns scattered customer feedback — support tickets, reviews, surveys, call notes — into a continuously updated, AI-prioritized product opportunity map instead of a manual triage backlog.",
+    tech: ["Next.js", "TypeScript", "Supabase", "pgvector", "Groq (Llama 3.3)", "Upstash Redis", "Recharts", "Tailwind CSS"],
+    highlights: ["Multi-tenant RBAC", "AI clustering + sentiment", "RICE opportunity scoring", "3 ingestion channels"],
+    github: "https://github.com/shriya246/Customer-Voice-Intelligence-Platform",
+    live: "https://customer-voice-intelligence-platfor.vercel.app",
+    categories: ["AI Products", "SaaS", "Analytics"],
+    problemStatement:
+      "Customer signal is fragmented across support tickets, reviews, surveys, call notes, and sales conversations, so the loudest voice — not the most common or highest-impact one — tends to win roadmap debates. Built solo, end to end, on a zero-paid-API stack to make prioritization evidence-based instead of anecdote-based.",
+    architectureDecisions: [
+      "Designed a multi-tenant schema (organizations, teams, role-based access) on Supabase Postgres with row-level security, feeding three ingestion paths: manual entry, CSV import, and an embeddable feedback widget.",
+      "Built an embedding + clustering pipeline (Supabase pgvector + Groq Llama 3.3) that groups raw feedback into labeled themes and extracts sentiment and pain points automatically.",
+      "Implemented RICE-based opportunity scoring per theme — tying volume, sentiment, and business impact into one ranked list — plus a trend view showing which themes are rising or falling over time.",
+      "Closed the loop from raw feedback to decision-ready output: data-backed personas generated from real clusters, a roadmap-linked feature tracker, and an auto-drafted executive summary.",
+      "Held the entire stack to genuinely free tiers (Supabase, Vercel, Upstash, Groq) throughout, keeping the project self-funded and forcing scope discipline."
+    ],
+    metrics: [
+      "3 feedback ingestion channels (manual, CSV, embeddable widget)",
+      "AI-clustered themes with automatic sentiment tagging",
+      "RICE-scored, ranked opportunity map",
+      "Zero paid APIs or hosting across the entire stack"
+    ]
+  },
+  {
+    id: "enterprise-product-intelligence-platform",
+    name: "Enterprise Product Intelligence Platform",
+    description:
+      "Independent build of a unified AI-native product intelligence workspace — analytics, feedback clustering, and an AI chat assistant that answers questions like “why is retention dropping” directly from a product's own data.",
+    tech: ["Next.js 14", "TypeScript", "Supabase", "pgvector", "Groq (Llama 3.3)", "Upstash Redis", "Recharts", "Tailwind CSS"],
+    highlights: ["DAU/WAU/MAU + retention", "AI clustering + chat assistant", "Roadmap + AI PRD generator", "Feature-flag experimentation"],
+    github: "https://github.com/shriya246/Enterprise-Product-Intelligence-Platform",
+    live: null,
+    categories: ["AI Products", "SaaS", "Analytics"],
+    problemStatement:
+      "Product Managers waste hours stitching together data from disconnected tools — product analytics, feedback tools, roadmap tools, and an ad-hoc ChatGPT tab — before they can make a single decision. Designed as an AI-first alternative that collapses that stack into one workspace, built solo on a zero-paid-API stack.",
+    architectureDecisions: [
+      "Scoped a three-sprint build: a multi-tenant foundation first (auth, orgs, RBAC, an event-ingestion SDK, DAU/WAU/MAU and retention analytics), then feedback intelligence (AI clustering, sentiment, a chat assistant answering natural-language questions against the org's own data), then a roadmap and executive layer.",
+      "Specified an AI PRD generator that turns a feature idea into a full draft — user stories, acceptance criteria, success metrics, and risks — plus AI-recommended roadmap prioritization driven by engagement and feedback data.",
+      "Scoped lightweight experimentation (feature flags, A/B split, significance check) using free statistics libraries instead of a paid experimentation platform.",
+      "Held the entire stack to genuinely free tiers (Supabase, Vercel, Upstash, Groq), documenting any real free-tier ceilings rather than exceeding them silently.",
+      "Actively in build — foundation and data layer underway, with feedback intelligence and the roadmap/PRD layer next."
+    ],
+    metrics: [
+      "3-sprint roadmap: analytics foundation → AI feedback intelligence → roadmap, PRD & experimentation",
+      "AI chat assistant designed to query live product data in natural language",
+      "AI-generated PRD drafts from a single feature idea",
+      "Zero paid APIs or hosting across the entire stack"
+    ]
+  },
+  {
     id: "enterprise-now-assist-agent-rollout",
     name: "Enterprise Now Assist Agent Rollout",
     description: "Scaled 60+ AI agents across ITSM, HRSD, and CRM from pilot to enterprise adoption with measurable deflection and cost outcomes.",

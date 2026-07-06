@@ -1,4 +1,4 @@
-import { Github, MoveRight } from "lucide-react";
+import { ExternalLink, Github, MoveRight } from "lucide-react";
 import Link from "next/link";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -35,18 +35,32 @@ export default function FeaturedProjects() {
                       </span>
                     ))}
                   </div>
-                  {project.github ? (
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noreferrer"
-                      aria-label={`Open ${project.name} on GitHub`}
-                      className="mt-6 inline-flex w-fit items-center gap-2 rounded-xl border border-border bg-background px-4 py-2 text-sm font-semibold text-foreground transition hover:border-violet/60 hover:text-violet"
-                    >
-                      <Github className="h-4 w-4" />
-                      GitHub
-                    </a>
-                  ) : null}
+                  <div className="mt-6 flex flex-wrap gap-3">
+                    {project.github ? (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label={`Open ${project.name} on GitHub`}
+                        className="inline-flex w-fit items-center gap-2 rounded-xl border border-border bg-background px-4 py-2 text-sm font-semibold text-foreground transition hover:border-violet/60 hover:text-violet"
+                      >
+                        <Github className="h-4 w-4" />
+                        GitHub
+                      </a>
+                    ) : null}
+                    {project.live ? (
+                      <a
+                        href={project.live}
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label={`Open ${project.name} live demo`}
+                        className="inline-flex w-fit items-center gap-2 rounded-xl border border-cyan/40 bg-cyan/10 px-4 py-2 text-sm font-semibold text-cyan-soft transition hover:border-cyan/70 hover:bg-cyan/15"
+                      >
+                        <ExternalLink className="h-4 w-4" />
+                        Live Demo
+                      </a>
+                    ) : null}
+                  </div>
                 </div>
               </article>
             </ScrollReveal>

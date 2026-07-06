@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { Github, X } from "lucide-react";
+import { ExternalLink, Github, X } from "lucide-react";
 import { useEffect } from "react";
 import type { Project } from "@/types";
 
@@ -115,18 +115,32 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
               </div>
             </section>
 
-            {project.github ? (
+            {project.github || project.live ? (
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={`Open ${project.name} source`}
-                  className="inline-flex items-center justify-center gap-2 rounded-xl bg-violet px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:shadow-violet-glow"
-                >
-                  <Github className="h-4 w-4" />
-                  GitHub
-                </a>
+                {project.github ? (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`Open ${project.name} source`}
+                    className="inline-flex items-center justify-center gap-2 rounded-xl bg-violet px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:shadow-violet-glow"
+                  >
+                    <Github className="h-4 w-4" />
+                    GitHub
+                  </a>
+                ) : null}
+                {project.live ? (
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`Open ${project.name} live demo`}
+                    className="inline-flex items-center justify-center gap-2 rounded-xl border border-cyan/40 bg-cyan/10 px-5 py-3 text-sm font-semibold text-cyan-soft transition hover:-translate-y-0.5 hover:border-cyan/70 hover:shadow-cyan-glow"
+                  >
+                    <ExternalLink className="h-4 w-4" />
+                    Live Demo
+                  </a>
+                ) : null}
               </div>
             ) : null}
           </motion.article>
