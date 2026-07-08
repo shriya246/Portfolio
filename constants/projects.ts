@@ -35,7 +35,7 @@ export const PROJECTS: Project[] = [
     tech: ["Next.js 14", "TypeScript", "Supabase", "pgvector", "Groq (Llama 3.3)", "Upstash Redis", "Recharts", "Tailwind CSS"],
     highlights: ["DAU/WAU/MAU + retention", "AI clustering + chat assistant", "Roadmap + AI PRD generator", "Feature-flag experimentation"],
     github: "https://github.com/shriya246/Enterprise-Product-Intelligence-Platform",
-    live: null,
+    live: "https://enterprise-product-intelligence-pla.vercel.app",
     categories: ["AI Products", "SaaS", "Analytics"],
     problemStatement:
       "Product Managers waste hours stitching together data from disconnected tools — product analytics, feedback tools, roadmap tools, and an ad-hoc ChatGPT tab — before they can make a single decision. Designed as an AI-first alternative that collapses that stack into one workspace, built solo on a zero-paid-API stack.",
