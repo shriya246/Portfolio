@@ -54,6 +54,33 @@ export const PROJECTS: Project[] = [
     ]
   },
   {
+    id: "enterprise-ai-agent-governance-platform",
+    name: "Enterprise AI Agent Governance Platform",
+    description:
+      "Independent build of a control tower for organizations running multiple internal AI agents — a developer-to-manager-to-admin approval workflow, full audit logging, prompt versioning with rollback, and automatic hallucination scoring, so no agent goes live or stays live without oversight.",
+    tech: ["React", "Vite", "Node.js", "Express", "Python", "FastAPI", "Supabase", "pgvector", "Recharts", "Tailwind CSS"],
+    highlights: ["3-step approval workflow", "Full audit logging", "Prompt versioning + rollback", "AI groundedness scoring"],
+    github: "https://github.com/shriya246/Enterprise-AI-Agent-Governance-Platform",
+    live: null,
+    categories: ["AI Products", "SaaS", "Analytics"],
+    problemStatement:
+      "Enterprises running HR, IT, Finance, and Support AI agents in parallel have no single answer to which agents are live, how often they hallucinate, whether they were approved before shipping, or who's accountable for what an agent said. Built solo, end to end, on a zero-paid-API stack to make agent governance real and inspectable instead of assumed.",
+    architectureDecisions: [
+      "Designed RBAC across four roles (Admin/Manager/Developer/Employee) and a three-stage approval workflow — Developer creates, Manager approves, Admin approves, then publish — with every state transition written to an audit log.",
+      "Built an Agent Studio that instantiates agents from HR/IT/Finance/Support templates and attaches a knowledge base through a RAG pipeline: upload, chunk, embed, retrieve at query time via Supabase pgvector.",
+      "Implemented prompt versioning so every system-prompt edit creates a new version, with one-click rollback to any prior version and that history visible in the audit trail.",
+      "Added an automatic model-based evaluation step that scores each response for groundedness and flags likely hallucination, plus a compliance pass — regex-based PII detection and a prompt-injection heuristic — applied before any input reaches the model layer.",
+      "Held the entire stack to genuinely free tiers (Supabase, Vercel, Render, a free-tier model provider) with local fallbacks behind every external dependency, so the whole thing runs with zero accounts configured.",
+      "Shipped a Control Tower dashboard surfacing active agents, usage, latency, rough cost estimate, and success rate — the same visibility a governance buyer would expect from a paid platform."
+    ],
+    metrics: [
+      "4 RBAC roles with a 3-stage approval workflow before any agent publishes",
+      "Every prompt + response logged with actor, timestamp, agent, and prompt version",
+      "Automatic groundedness/hallucination scoring on every response",
+      "Zero paid APIs or hosting across the entire stack"
+    ]
+  },
+  {
     id: "enterprise-now-assist-agent-rollout",
     name: "Enterprise Now Assist Agent Rollout",
     description: "Scaled 60+ AI agents across ITSM, HRSD, and CRM from pilot to enterprise adoption with measurable deflection and cost outcomes.",
